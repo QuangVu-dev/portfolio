@@ -1,0 +1,329 @@
+header .nav-link {
+  position: relative;
+  margin: 0 15px;
+}
+header .nav-item .nav-link.active {
+  color: #35a22d !important;
+}
+header .nav-item .nav-link.active::before {
+  content: "";
+  height: 2px;
+  background-color: #35a22d;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+header .nav-link::before {
+  content: "";
+  height: 2px;
+  background-color: #35a22d;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: all 0.5s;
+}
+header .nav-link:hover::before {
+  width: 100%;
+}
+header .nav-item a:hover {
+  color: #35a22d !important;
+}
+/* carousel */
+.carousel-item {
+  height: 100%;
+}
+.carousel-caption img {
+  width: 100px;
+  height: 100px;
+}
+.carousel-caption {
+  /* left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  /* transform nhan gia tri am cho 2 chieu giup day nguoc phan tu lai nham muc dich canh giua phan tu */
+  /* right: unset;
+  bottom: unset; */
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 43, 54, 0.5);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carousel-indicators {
+  bottom: 10%;
+}
+.carousel .carousel-indicators button {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: none;
+}
+.carousel .carousel-indicators button.active {
+  background-color: #35a22d;
+}
+.carousel-inner h5 {
+  font-size: 5vw;
+}
+.carousel-inner p {
+  font-size: 3vw;
+}
+/* projects */
+.project .project_title {
+  max-width: 750px;
+}
+.project .project_title h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #1a1d2d;
+}
+.project .project_title p {
+  color: #585858;
+  line-height: 24px;
+}
+.project .nav-item .nav-link {
+  color: black;
+  border: 1px solid black;
+}
+.project .nav-item .nav-link.active {
+  color: white;
+  background-color: #35a22d;
+  border-color: #35a22d;
+}
+/* .col-4 {
+  height: 150px;
+  background-color: orange;
+} */
+.project .project_content .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row .col-4 {
+  position: relative;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row .project_item {
+  margin-top: 30px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.13);
+  border: none;
+  cursor: pointer;
+}
+.row .project_item img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.row .project_text {
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 0 0 1rem 1rem;
+  transition: all 0.8s;
+}
+.project_text h3 {
+  font-size: 1.25rem;
+  transition: all 0.8s;
+}
+.project_text span {
+  display: inline-block;
+  color: #585858;
+  margin-bottom: 1rem;
+}
+.project_item:hover .project_text {
+  border-color: #35a22d;
+  border-top-color: transparent;
+}
+.project_item:hover h3 {
+  color: #35a22d;
+}
+/* end projects */
+/* available */
+.available {
+  background-image: url(../image/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0 120px;
+  background-attachment: fixed;
+}
+/* Sử dụng before, after để tạo lớp phủ */
+/* .available::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(7, 10, 12, 0.72);
+} */
+
+.available .overlay {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(7, 10, 12, 0.72);
+}
+.available_title {
+  max-width: 750px;
+}
+.available_title h2 {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 700;
+}
+.available_title p {
+  line-height: 24px;
+}
+.available_content .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col-md-4 {
+  position: relative;
+  /* width: 100%; */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.available_item {
+  padding: 40px 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  transition: all 0.8s;
+}
+.available_item:hover {
+  border-color: white;
+  background-color: #000;
+}
+.available_item i {
+  font-size: 48px;
+  color: #35a22d;
+}
+.available_item h4 {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  padding-top: 25px;
+  font-weight: 800;
+}
+.available_item p {
+  padding-top: 15px;
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+}
+/* end available */
+/* award */
+.award {
+  padding: 70px 0;
+  color: #585858;
+  position: relative;
+}
+.award .award_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/memphis_3.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  opacity: 0.5;
+}
+.award .award_left {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+  padding: 45px;
+}
+.award_left h2 {
+  font-size: 36px;
+  line-height: 42px;
+  color: #1a1d2d;
+  font-weight: 700;
+}
+.award_right {
+  padding: 45px 0;
+}
+.award_right .row .col img {
+  max-width: 100%;
+  height: auto;
+}
+/* end award */
+/* footer */
+footer {
+  background-color: #222222;
+}
+footer .footer_icon a {
+  margin-right: 10px;
+}
+footer .footer_icon i {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  border: 1px solid #454545;
+  transition: all 0.8s;
+  color: #aaaaaa;
+}
+footer i:hover {
+  color: #35a22d;
+  border-color: #35a22d;
+}
+footer .footer_copyright {
+  border-top: 1px solid #454545;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+footer p {
+  color: #aaaaaa;
+  margin: 0;
+}
+/* end footer */
+
+/* Responsive website */
+/* Lưu ý khi sử dụng max-width cho responsive: luôn để các giá trị max-width lớn hơn nằm trên các giá trị nhỏ
+ */
+/* @media screen and (max-width: 1200px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+@media screen and (max-width: 576px) {
+  .carousel h5 {
+    color: orange;
+  }
+} */
+
+/* Lưu ý đặc biệt: khi sử dụng min-width cho responsive website nhớ set từ các giá trị nhỏ trước sau đó mới tới lớn */
+/* @media screen and (min-width: 576px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carousel h5 {
+    color: purple;
+  }
+} */
